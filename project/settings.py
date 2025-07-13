@@ -27,6 +27,8 @@ SECRET_KEY = 'django-insecure-2b0o*l!8+e(r#g508mjt#qbh3ju4s9an)wx7435_rd)(1rsu52
 DEBUG = False
 
 ALLOWED_HOSTS = ['music.onrender.com']
+print("⚠️ LOADING DJANGO SETTINGS")
+print(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}")
 
 
 # Application definition
