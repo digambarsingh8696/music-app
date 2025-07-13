@@ -1,7 +1,5 @@
 from django.urls import path
 from . import views
-from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -16,4 +14,4 @@ urlpatterns = [
     path('playlist/add/', views.add_to_playlist, name='add_to_playlist'),
     path("api/user-playlists/", views.user_playlists_api, name="user_playlists_api"),
     path("add-to-playlist/", views.add_to_playlist, name="add_to_playlist"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
