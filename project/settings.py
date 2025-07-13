@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2b0o*l!8+e(r#g508mjt#qbh3ju4s9an)wx7435_rd)(1rsu52'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['music.onrender.com']
 
 
 # Application definition
@@ -121,6 +121,8 @@ LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = '/auth/login/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Keep session alive for 30 days (or whatever you want)
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30  # 30 days in seconds
