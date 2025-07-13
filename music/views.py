@@ -14,6 +14,13 @@ import json
 
 # Create your views here.
 
+def safe_fetch(query):
+    try:
+        print(f"🔍 Fetching: {query}")
+        return fetch_jiosaavn_songs(query)
+    except Exception as e:
+        print(f"⚠️ Error fetching '{query}': {e}")
+        return []
 
 @login_required
 def user_playlists_api(request):
@@ -40,6 +47,7 @@ def create_playlist(request):
     return render(request, 'music/create_playlist.html')
 
 
+    
 @login_required
 def view_playlist(request, playlist_id):
     playlist = Playlist.objects.get(id=playlist_id, user=request.user)
